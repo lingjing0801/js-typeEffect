@@ -8,7 +8,10 @@ var id = "type-box";                       //要寫入文字的ID
 // 定義方法
 function type(){
     var box=document.getElementById(id);
-    box.innerHTML=texts[index];
+    // 變數 切割完的文字 = 文字陣列 切割文字 (開始位置,切幾個字)
+    var slice = texts[index].slice(0,1);
+    // 盒子.插入內容 = 切割完的文字
+    box.innerHTML=slice;
 }
 // 當網頁載入完成時執行方法 type
 document.addEventListener("DOMContentLoaded",type);
